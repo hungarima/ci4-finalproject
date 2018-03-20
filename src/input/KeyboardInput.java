@@ -1,6 +1,7 @@
 package input;
 
 import base.Vector2D;
+import utils.Utils;
 
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
@@ -14,7 +15,6 @@ public class KeyboardInput extends KeyAdapter {
     public Vector2D rotate;
 
     public KeyboardInput () {
-
         this.velocity = new Vector2D();
         this.position = new Vector2D();
         this.rotate = new Vector2D();
@@ -44,11 +44,9 @@ public class KeyboardInput extends KeyAdapter {
         char keyChar = e.getKeyChar();
         if (keyChar == 'd' || keyChar == 'D') {
             this.velocity.set(2,0);
-            this.position.set(rotate.rotate(60.0));
         }
         if (keyChar == 'a' || keyChar == 'A') {
             this.velocity.set(-2,0);
-            this.position.set(rotate.rotate(-60.0));
         }
         if (keyChar == 'w' || keyChar == 'W') {
             this.velocity.set(0,-2);
