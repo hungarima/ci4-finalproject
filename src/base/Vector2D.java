@@ -14,6 +14,14 @@ public class Vector2D {
         this.y = 0;
     }
 
+    public float getX(){
+        return this.x;
+    }
+
+    public float getY(){
+        return this.y;
+    }
+
     public Vector2D set(float x, float y) {
         this.x = x;
         this.y = y;

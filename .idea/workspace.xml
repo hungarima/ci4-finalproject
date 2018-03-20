@@ -2,25 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="43d82464-16db-486f-a771-13782ac2c021" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/GameCanvas.java" afterPath="$PROJECT_DIR$/src/GameCanvas.java" />
-      <change beforePath="$PROJECT_DIR$/src/game/background/Background.java" afterPath="$PROJECT_DIR$/src/game/background/Background.java" />
-      <change beforePath="$PROJECT_DIR$/src/game/enemy/Enemy.java" afterPath="$PROJECT_DIR$/src/game/enemy/Enemy.java" />
-      <change beforePath="$PROJECT_DIR$/src/game/enemy/EnemySqawner.java" afterPath="$PROJECT_DIR$/src/game/enemy/EnemySqawner.java" />
-      <change beforePath="$PROJECT_DIR$/src/game/enemy/bullet/BulletEnemy.java" afterPath="$PROJECT_DIR$/src/game/enemy/bullet/BulletEnemy.java" />
-      <change beforePath="$PROJECT_DIR$/src/game/enemy/bullet/EnemyShoot.java" afterPath="$PROJECT_DIR$/src/game/enemy/bullet/EnemyShoot.java" />
-      <change beforePath="$PROJECT_DIR$/src/game/enemyhard/EnemyHard.java" afterPath="$PROJECT_DIR$/src/game/enemyhard/EnemyHard.java" />
-      <change beforePath="$PROJECT_DIR$/src/game/enemyhard/bullet/BulletEnemyHard.java" afterPath="$PROJECT_DIR$/src/game/enemyhard/bullet/BulletEnemyHard.java" />
-      <change beforePath="$PROJECT_DIR$/src/game/enemyhard/bullet/BulletEnemyHardMove.java" afterPath="$PROJECT_DIR$/src/game/enemyhard/bullet/BulletEnemyHardMove.java" />
-      <change beforePath="$PROJECT_DIR$/src/game/enemyhard/bullet/EnemyHardShoot.java" afterPath="$PROJECT_DIR$/src/game/enemyhard/bullet/EnemyHardShoot.java" />
+      <change beforePath="$PROJECT_DIR$/out/production/ci4-finalproject/base/Vector2D.class" afterPath="$PROJECT_DIR$/out/production/ci4-finalproject/base/Vector2D.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/ci4-finalproject/game/player/Player.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/ci4-finalproject/input/KeyboardInput.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/base/GameObjectManager.java" afterPath="$PROJECT_DIR$/src/base/GameObjectManager.java" />
+      <change beforePath="$PROJECT_DIR$/src/base/Vector2D.java" afterPath="$PROJECT_DIR$/src/base/Vector2D.java" />
       <change beforePath="$PROJECT_DIR$/src/game/player/Player.java" afterPath="$PROJECT_DIR$/src/game/player/Player.java" />
-      <change beforePath="$PROJECT_DIR$/src/game/player/bullet/Bullet.java" afterPath="$PROJECT_DIR$/src/game/player/bullet/Bullet.java" />
-      <change beforePath="$PROJECT_DIR$/src/game/player/bullet/PlayerShoot.java" afterPath="$PROJECT_DIR$/src/game/player/bullet/PlayerShoot.java" />
-      <change beforePath="$PROJECT_DIR$/src/game/square/Square.java" afterPath="$PROJECT_DIR$/src/game/square/Square.java" />
-      <change beforePath="$PROJECT_DIR$/src/game/square/SquareSpawner.java" afterPath="$PROJECT_DIR$/src/game/square/SquareSpawner.java" />
-      <change beforePath="$PROJECT_DIR$/src/game/square/circle/CircleSquare.java" afterPath="$PROJECT_DIR$/src/game/square/circle/CircleSquare.java" />
-      <change beforePath="$PROJECT_DIR$/src/game/square/matrix/MatrixSquare.java" afterPath="$PROJECT_DIR$/src/game/square/matrix/MatrixSquare.java" />
+      <change beforePath="$PROJECT_DIR$/src/input/KeyboardInput.java" afterPath="$PROJECT_DIR$/src/input/KeyboardInput.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,104 +21,55 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="EnemySqawner.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/game/enemy/EnemySqawner.java">
+      <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/game/player/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="7" column="15" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BulletEnemy.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/game/enemy/bullet/BulletEnemy.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="6" column="15" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EnemyShoot.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/game/enemy/bullet/EnemyShoot.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="7" column="15" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Square.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/game/square/Square.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="9" column="15" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SquareSpawner.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/game/square/SquareSpawner.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="8" column="15" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MatrixSquare.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/game/square/matrix/MatrixSquare.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="9" column="15" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CircleSquare.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/game/square/circle/CircleSquare.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+            <state relative-caret-position="76">
+              <caret line="29" column="41" lean-forward="true" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
               <folding>
-                <element signature="e#0#734#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameCanvas.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GameCanvas.java">
+      <file leaf-file-name="GameObjectManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/base/GameObjectManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="21" lean-forward="false" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-              <folding />
+            <state relative-caret-position="121">
+              <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameWindow.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GameWindow.java">
+      <file leaf-file-name="Vector2D.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/base/Vector2D.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-442">
-              <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-              <folding />
+            <state relative-caret-position="-440">
+              <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+              <folding>
+                <element signature="e#261#262#0" expanded="true" />
+                <element signature="e#290#291#0" expanded="true" />
+                <element signature="e#316#317#0" expanded="true" />
+                <element signature="e#345#346#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <file leaf-file-name="KeyboardInput.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/input/KeyboardInput.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
-              <folding />
+            <state relative-caret-position="221">
+              <caret line="50" column="45" lean-forward="false" selection-start-line="50" selection-start-column="45" selection-end-line="50" selection-end-column="45" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1696#1697#0" expanded="true" />
+                <element signature="e#1734#1735#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -150,7 +90,6 @@
         <option value="$PROJECT_DIR$/src/game/background/Background.java" />
         <option value="$PROJECT_DIR$/src/game/player/bullet/Bullet.java" />
         <option value="$PROJECT_DIR$/src/game/player/bullet/PlayerShoot.java" />
-        <option value="$PROJECT_DIR$/src/game/player/Player.java" />
         <option value="$PROJECT_DIR$/src/game/enemyhard/EnemyHard.java" />
         <option value="$PROJECT_DIR$/src/game/enemyhard/bullet/BulletEnemyHard.java" />
         <option value="$PROJECT_DIR$/src/game/enemyhard/bullet/BulletEnemyHardMove.java" />
@@ -164,6 +103,11 @@
         <option value="$PROJECT_DIR$/src/game/square/matrix/MatrixSquare.java" />
         <option value="$PROJECT_DIR$/src/game/square/circle/CircleSquare.java" />
         <option value="$PROJECT_DIR$/src/GameCanvas.java" />
+        <option value="$PROJECT_DIR$/src/input/MouseMotionInput.java" />
+        <option value="$PROJECT_DIR$/src/base/Vector2D.java" />
+        <option value="$PROJECT_DIR$/src/base/GameObjectManager.java" />
+        <option value="$PROJECT_DIR$/src/input/KeyboardInput.java" />
+        <option value="$PROJECT_DIR$/src/game/player/Player.java" />
       </list>
     </option>
   </component>
@@ -208,44 +152,13 @@
               <item name="ci4-finalproject" type="b2602c69:ProjectViewProjectNode" />
               <item name="ci4-finalproject" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="game" type="462c0819:PsiDirectoryNode" />
+              <item name="base" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ci4-finalproject" type="b2602c69:ProjectViewProjectNode" />
               <item name="ci4-finalproject" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="game" type="462c0819:PsiDirectoryNode" />
-              <item name="background" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ci4-finalproject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ci4-finalproject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="game" type="462c0819:PsiDirectoryNode" />
-              <item name="enemy" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ci4-finalproject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ci4-finalproject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="game" type="462c0819:PsiDirectoryNode" />
-              <item name="enemy" type="462c0819:PsiDirectoryNode" />
-              <item name="bullet" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ci4-finalproject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ci4-finalproject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="game" type="462c0819:PsiDirectoryNode" />
-              <item name="enemyhard" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ci4-finalproject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ci4-finalproject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="game" type="462c0819:PsiDirectoryNode" />
-              <item name="enemyhard" type="462c0819:PsiDirectoryNode" />
-              <item name="bullet" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ci4-finalproject" type="b2602c69:ProjectViewProjectNode" />
@@ -253,37 +166,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="game" type="462c0819:PsiDirectoryNode" />
               <item name="player" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ci4-finalproject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ci4-finalproject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="game" type="462c0819:PsiDirectoryNode" />
-              <item name="player" type="462c0819:PsiDirectoryNode" />
-              <item name="bullet" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ci4-finalproject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ci4-finalproject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="game" type="462c0819:PsiDirectoryNode" />
-              <item name="square" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ci4-finalproject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ci4-finalproject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="game" type="462c0819:PsiDirectoryNode" />
-              <item name="square" type="462c0819:PsiDirectoryNode" />
-              <item name="circle" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ci4-finalproject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ci4-finalproject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="game" type="462c0819:PsiDirectoryNode" />
-              <item name="square" type="462c0819:PsiDirectoryNode" />
-              <item name="matrix" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ci4-finalproject" type="b2602c69:ProjectViewProjectNode" />
@@ -526,14 +408,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/player/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="40" lean-forward="false" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/game/enemyhard/EnemyHard.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -627,24 +501,8 @@
         <state relative-caret-position="263">
           <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding>
-            <element signature="e#0#734#0" expanded="true" />
+            <element signature="e#0#734#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameCanvas.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="21" lean-forward="false" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameWindow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-442">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -653,6 +511,129 @@
         <state relative-caret-position="0">
           <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GameWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="53" column="44" lean-forward="true" selection-start-line="53" selection-start-column="44" selection-end-line="53" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/physic/RunHitObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/physic/PhysicBody.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/physic/BoxCollider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/physic/HitObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/input/MouseMotionInput.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#842#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/base/GameObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="7" column="14" lean-forward="false" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GameCanvas.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-901">
+          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.base/java/util/stream/ForEachOps.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="183" column="0" lean-forward="false" selection-start-line="183" selection-start-column="0" selection-end-line="183" selection-end-column="0" />
+          <folding>
+            <element signature="e#6103#6104#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/base/GameObjectManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/base/Vector2D.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-440">
+          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding>
+            <element signature="e#261#262#0" expanded="true" />
+            <element signature="e#290#291#0" expanded="true" />
+            <element signature="e#316#317#0" expanded="true" />
+            <element signature="e#345#346#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/player/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="29" column="41" lean-forward="true" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/input/KeyboardInput.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="50" column="45" lean-forward="false" selection-start-line="50" selection-start-column="45" selection-end-line="50" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1696#1697#0" expanded="true" />
+            <element signature="e#1734#1735#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

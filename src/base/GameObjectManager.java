@@ -1,8 +1,8 @@
 package base;
 
-import game.enemy.Enemy;
+//import game.enemy.Enemy;
 import game.player.Player;
-import game.square.Square;
+//import game.square.Square;
 import physic.BoxCollider;
 import physic.PhysicBody;
 
