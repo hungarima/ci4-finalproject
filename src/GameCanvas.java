@@ -67,6 +67,7 @@ public class GameCanvas extends JPanel {
         Background background = new Background();
         background.position.set(200, 300);
         GameObjectManager.instance.add(background);
+
     }
 
 //    private void setupEnemyHard() {

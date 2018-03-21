@@ -36,13 +36,13 @@ public class Player extends GameObject {
 
     private void direction(){
         if(KeyboardInput.instance.velocity.getX() > 0){
-            this.image = Utils.loadImage("resources/grabmodel3.png");
+            this.image = Utils.loadImage("resources/player/grabmodel-right.png");
         }
         else if(KeyboardInput.instance.velocity.getX() < 0){
-            this.image = Utils.loadImage("resources/grabmodel4.png");
+            this.image = Utils.loadImage("resources/player/grabmodel-left.png");
         }
         else{
-            this.image = Utils.loadImage("resources/grabmodel2.png");
+            this.image = Utils.loadImage("resources/player/grabmodel.png");
         }
     }
 
