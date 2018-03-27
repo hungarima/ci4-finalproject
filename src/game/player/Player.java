@@ -7,15 +7,13 @@ import input.KeyboardInput;
 import utils.Utils;
 
 import java.awt.event.KeyEvent;
+import java.security.Key;
 
 public class Player extends GameObject {
 
 //    private PlayerShoot playerShoot;
 
     public Player() {
-
-//        this.playerShoot = new PlayerShoot();
-//        MouseMotionInput mouseMotionInput = new MouseMotionInput(); //ko the nao khai bao nhu nay, ko listen dc
          KeyboardInput keyboardInput = new KeyboardInput();
     }
 

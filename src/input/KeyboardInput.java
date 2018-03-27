@@ -12,12 +12,11 @@ public class KeyboardInput extends KeyAdapter {
 
     public Vector2D position;
     public Vector2D velocity;
-    public Vector2D rotate;
+//    private boolean keyboardReleased = false;
 
     public KeyboardInput () {
         this.velocity = new Vector2D();
         this.position = new Vector2D();
-        this.rotate = new Vector2D();
     }
 
 //    @Override
@@ -41,25 +40,23 @@ public class KeyboardInput extends KeyAdapter {
 
     @Override
     public void keyPressed(KeyEvent e) {
-        char keyChar = e.getKeyChar();
-        if (keyChar == 'd' || keyChar == 'D') {
+        if (e.getKeyCode() == KeyEvent.VK_D || e.getKeyCode() == KeyEvent.VK_RIGHT) {
             this.velocity.set(2,0);
         }
-        if (keyChar == 'a' || keyChar == 'A') {
+        else if (e.getKeyCode() == KeyEvent.VK_A || e.getKeyCode() == KeyEvent.VK_LEFT) {
             this.velocity.set(-2,0);
         }
-        if (keyChar == 'w' || keyChar == 'W') {
+        else if (e.getKeyCode() == KeyEvent.VK_W || e.getKeyCode() == KeyEvent.VK_UP) {
             this.velocity.set(0,-2);
         }
-        if (keyChar == 's' || keyChar == 'S') {
+        else if (e.getKeyCode() == KeyEvent.VK_S || e.getKeyCode() == KeyEvent.VK_DOWN) {
             this.velocity.set(0,2);
         }
-
     }
+
 
     @Override
     public void keyReleased(KeyEvent e) {
         this.velocity.set(0,0);
     }
-
 }
