@@ -2,6 +2,7 @@ package game.block;
 
 import base.GameObject;
 import base.Vector2D;
+import renderer.ImageRenderer;
 import utils.Utils;
 
 public class Block extends GameObject {
@@ -9,7 +10,7 @@ public class Block extends GameObject {
 
 
     public Block() {
-        this.image = Utils.loadImage("resources/block/block.png");
+        this.renderer = new ImageRenderer("resources/block/block.png");
         this.velocity = new Vector2D();
     }
 

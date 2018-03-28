@@ -2,6 +2,7 @@ package game.enemy;
 
 import base.GameObject;
 import base.Vector2D;
+import renderer.ImageRenderer;
 import utils.Utils;
 
 public class Enemy extends GameObject {
@@ -9,7 +10,7 @@ public class Enemy extends GameObject {
 
 
     public Enemy() {
-        this.image = Utils.loadImage("resources/enemyBike/square_deadly_bullet.png");
+        this.renderer = new ImageRenderer("resources/enemyBike/square_deadly_bullet.png");
         this.velocity = new Vector2D();
     }
 

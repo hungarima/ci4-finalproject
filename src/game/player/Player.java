@@ -1,9 +1,13 @@
 package game.player;
 
+import base.FrameCounter;
 import base.GameObject;
 //import game.player.bullet.PlayerShoot;
 //import input.MouseMotionInput;
 import input.KeyboardInput;
+import physic.BoxCollider;
+import renderer.ImageRenderer;
+import renderer.Renderer;
 import utils.Utils;
 
 import java.awt.event.KeyEvent;
@@ -13,8 +17,25 @@ public class Player extends GameObject {
 
 //    private PlayerShoot playerShoot;
 
+    private Renderer imageRenderer;
+//    private BoxCollider boxCollider = new BoxCollider(40, 40);
+    private FrameCounter frameCounter;
+
+
     public Player() {
-         KeyboardInput keyboardInput = new KeyboardInput();
+        if(KeyboardInput.instance.velocity.getX() > 0){
+            this.imageRenderer = new ImageRenderer("resources/player/NVAT phải.png");
+        }
+        else if(KeyboardInput.instance.velocity.getX() < 0){
+            this.imageRenderer = new ImageRenderer("resources/player/NVAT trái.png");
+        }
+        else{
+            this.imageRenderer = new ImageRenderer("resources/player/NVAT.png");
+        }
+
+        KeyboardInput keyboardInput = new KeyboardInput();
+        this.renderer = this.imageRenderer;
+
     }
 
     private void block(){
@@ -33,15 +54,7 @@ public class Player extends GameObject {
     }
 
     private void direction(){
-        if(KeyboardInput.instance.velocity.getX() > 0){
-            this.image = Utils.loadImage("resources/player/grabmodel-right.png");
-        }
-        else if(KeyboardInput.instance.velocity.getX() < 0){
-            this.image = Utils.loadImage("resources/player/grabmodel-left.png");
-        }
-        else{
-            this.image = Utils.loadImage("resources/player/grabmodel.png");
-        }
+
     }
 
     @Override
@@ -49,7 +62,6 @@ public class Player extends GameObject {
         super.run();
         this.direction();
         this.position.addUp(KeyboardInput.instance.velocity);
-//        this.position.set(KeyboardInput.instance.position);
         this.block();
 
 //        this.playerShoot.run(this);
