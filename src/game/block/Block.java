@@ -1,15 +1,15 @@
-package game.enemy;
+package game.block;
 
 import base.GameObject;
 import base.Vector2D;
 import utils.Utils;
 
-public class Enemy extends GameObject {
+public class Block extends GameObject {
     public Vector2D velocity;
 
 
-    public Enemy() {
-        this.image = Utils.loadImage("resources/enemyBike/square_deadly_bullet.png");
+    public Block() {
+        this.image = Utils.loadImage("resources/block/block.png");
         this.velocity = new Vector2D();
     }
 

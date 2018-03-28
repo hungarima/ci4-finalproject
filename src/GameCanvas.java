@@ -1,6 +1,7 @@
 import base.GameObjectManager;
 import game.background.Background;
-//import game.enemy.EnemySqawner;
+import game.block.BlockSpawner;
+import game.enemy.EnemySqawner;
 //import game.enemyhard.EnemyHard;
 import game.player.Player;
 //import game.square.circle.CircleSquare;
@@ -26,7 +27,8 @@ public class GameCanvas extends JPanel {
         this.setupBackground();
         this.setupPlayer();
 //        GameObjectManager.instance.add(new SquareSpawner());
-//        GameObjectManager.instance.add(new EnemySqawner());
+        GameObjectManager.instance.add(new EnemySqawner());
+        GameObjectManager.instance.add(new BlockSpawner());
 //        this.setupMatrix();
 //        this.setCircleSquare();
 //        this.setupEnemyHard();
@@ -67,6 +69,7 @@ public class GameCanvas extends JPanel {
         Background background = new Background();
         background.position.set(200, 300);
         GameObjectManager.instance.add(background);
+
     }
 
 //    private void setupEnemyHard() {
