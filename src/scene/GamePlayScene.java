@@ -1,7 +1,8 @@
 package scene;
 
 import base.GameObjectManager;
-import game.background.Background;
+import game.background.Background1;
+import game.background.Background2;
 import game.player.Player;
 
 import javax.sound.sampled.Clip;
@@ -30,8 +31,11 @@ public class GamePlayScene implements Scene {
     }
 
     private void setupBackground() {
-        Background background = new Background();
-        background.position.set(200, 300);
-        GameObjectManager.instance.add(background);
+        Background1 background1 = new Background1();
+        Background2 background2 = new Background2();
+        background1.position.set(200, 300);
+        background2.position.set(200, 300 - 720);
+        GameObjectManager.instance.add(background1);
+        GameObjectManager.instance.add(background2);
     }
 }

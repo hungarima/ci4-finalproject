@@ -1,9 +1,7 @@
 import base.GameObjectManager;
-import game.background.Background;
 //import game.block.BlockSpawner;
 //import game.enemy.EnemySqawner;
 //import game.enemyhard.EnemyHard;
-import game.player.Player;
 import scence.SceneManager;
 import scene.GamePlayScene;
 //import game.square.circle.CircleSquare;
