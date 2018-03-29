@@ -17,8 +17,8 @@ public class Background2 extends GameObject {
     public void run() {
         super.run();
         this.position.y += 1;
-        if (this.position.y >= 720) {
-            this.position.y = -720;
+        if (this.position.y >= 1000) {
+            this.position.y = 300 -720;
         }
 //        System.out.println(this.position.y);
     }

@@ -23,6 +23,7 @@ public class Player extends GameObject {
 
 
     public Player() {
+
         if(KeyboardInput.instance.velocity.getX() > 0){
             this.imageRenderer = new ImageRenderer("resources/player/NVAT phải.png");
         }
@@ -59,6 +60,10 @@ public class Player extends GameObject {
 
     @Override
     public void run() {
+
+
+
+
         super.run();
         this.direction();
         this.position.addUp(KeyboardInput.instance.velocity);
