@@ -21,4 +21,8 @@ public class FrameCounter {
     public void setMax(int max) {
         this.max = max;
     }
+
+    public void reset() {
+        this.count = 0;
+    }
 }
