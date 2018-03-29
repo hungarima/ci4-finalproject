@@ -7,7 +7,7 @@ import utils.Utils;
 public class Background extends GameObject {
 
     public Background() {
-            this.renderer = new ImageRenderer("resources/background/background2.png");
+            this.renderer = new ImageRenderer("resources/background/background1.png");
     }
 
     @Override

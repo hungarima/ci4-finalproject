@@ -28,7 +28,7 @@ public class GameCanvas extends JPanel {
     }
 
     private void setup() {
-        this.setSize(400, 600);
+        this.setSize(301, 600);
         this.setVisible(true);
     }
 
