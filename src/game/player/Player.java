@@ -23,18 +23,6 @@ public class Player extends GameObject {
 
 
     public Player() {
-        if(KeyboardInput.instance.velocity.getX() > 0){
-            this.imageRenderer = new ImageRenderer("resources/player/NVAT phải.png");
-        }
-        else if(KeyboardInput.instance.velocity.getX() < 0){
-            this.imageRenderer = new ImageRenderer("resources/player/NVAT trái.png");
-        }
-        else{
-            this.imageRenderer = new ImageRenderer("resources/player/NVAT.png");
-        }
-
-        KeyboardInput keyboardInput = new KeyboardInput();
-        this.renderer = this.imageRenderer;
 
     }
 
@@ -48,8 +36,8 @@ public class Player extends GameObject {
         if (this.position.getY() <= 0){
             this.position.y = 0;
         }
-        if (this.position.getY() >= 600){
-            this.position.y = 600;
+        if (this.position.getY() >= 520){
+            this.position.y = 520;
         }
     }
 
@@ -59,11 +47,22 @@ public class Player extends GameObject {
 
     @Override
     public void run() {
+        if(KeyboardInput.instance.velocity.getX() > 0){
+            this.imageRenderer = new ImageRenderer("resources/player/NVAT phải.png");
+        }
+        else if(KeyboardInput.instance.velocity.getX() < 0){
+            this.imageRenderer = new ImageRenderer("resources/player/NVAT trái.png");
+        }
+        else{
+            this.imageRenderer = new ImageRenderer("resources/player/NVAT.png");
+        }
+        this.renderer = this.imageRenderer;
         super.run();
         this.direction();
         this.position.addUp(KeyboardInput.instance.velocity);
         this.block();
 
+        System.out.println(KeyboardInput.instance.velocity.getX());
 //        this.playerShoot.run(this);
 //        this.position.set(MouseMotionInput.instance.position); //chinh lai dieu kien de ngan player ra ngoai window
     }
