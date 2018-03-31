@@ -6,6 +6,8 @@ import base.GameObject;
 //import input.MouseMotionInput;
 import input.KeyboardInput;
 import physic.BoxCollider;
+import physic.HitObject;
+import physic.PhysicBody;
 import renderer.ImageRenderer;
 import renderer.Renderer;
 import utils.Utils;
@@ -13,18 +15,17 @@ import utils.Utils;
 import java.awt.event.KeyEvent;
 import java.security.Key;
 
-public class Player extends GameObject {
+public class Player extends GameObject implements PhysicBody, HitObject {
 
-//    private PlayerShoot playerShoot;
+
 
     private Renderer imageRenderer;
-//    private BoxCollider boxCollider = new BoxCollider(40, 40);
+    private BoxCollider boxCollider = new BoxCollider(100, 100);
     private FrameCounter frameCounter;
-    public int score;
 
 
     public Player() {
-        score = 0;
+        this.frameCounter = new FrameCounter(50);
     }
 
     private void block(){
@@ -64,9 +65,22 @@ public class Player extends GameObject {
         this.direction();
         this.position.addUp(KeyboardInput.instance.velocity);
         this.block();
-        System.out.println(score);
+
+
 
 //        this.playerShoot.run(this);
 //        this.position.set(MouseMotionInput.instance.position); //chinh lai dieu kien de ngan player ra ngoai window
     }
+
+        @Override
+        public void getHit(GameObject gameObject) {
+            System.out.println("Ouch!");
+        }
+
+        @Override
+        public BoxCollider getBoxCollider() {
+            return this.boxCollider;
+        }
+
 }
+

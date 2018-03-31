@@ -1,9 +1,13 @@
 package scene;
 
+
 import base.GameObjectManager;
 import game.background.Background1;
 import game.background.Background2;
+
+
 import game.player.Player;
+import game.enemy.EnemySpawner;
 
 import javax.sound.sampled.Clip;
 
@@ -18,11 +22,11 @@ public class GamePlayScene implements Scene {
 //        this.clip.loop(-1);
         this.setupBackground();
         this.setupPlayer();
+        this.setupEnemy();
     }
 
     @Override
     public void deinit() {
-
     }
 
     private void setupPlayer() {
@@ -38,5 +42,11 @@ public class GamePlayScene implements Scene {
         background2.position.set(200, 300 - 720);
         GameObjectManager.instance.add(background1);
         GameObjectManager.instance.add(background2);
+    }
+
+    private void setupEnemy() {
+        EnemySpawner enemySpawner = GameObjectManager.instance.recycle(EnemySpawner.class);
+        enemySpawner.create();
+        GameObjectManager.instance.add(new EnemySpawner());
     }
 }

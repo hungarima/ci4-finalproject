@@ -4,6 +4,7 @@ import base.GameObjectManager;
 //import game.enemyhard.EnemyHard;
 import scence.SceneManager;
 import scene.GamePlayScene;
+import scene.StartScene;
 //import game.square.circle.CircleSquare;
 //import game.square.matrix.MatrixSquare;
 //import game.square.SquareSpawner;
@@ -23,6 +24,7 @@ public class GameCanvas extends JPanel {
         this.setup();
         this.setupBackBuffered();
         SceneManager.instance.changeScene(new GamePlayScene());
+
     }
 
     private void setup() {
