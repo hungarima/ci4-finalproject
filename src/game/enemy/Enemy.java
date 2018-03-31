@@ -11,7 +11,7 @@ import renderer.ImageRenderer;
 
 import java.util.Random;
 
-public class Enemy extends GameObject implements PhysicBody, HitObject{
+public class Enemy extends GameObject implements PhysicBody, HitObject {
     public Vector2D velocity;
     private BoxCollider boxCollider;
     private RunHitObject runHitObject;
@@ -26,7 +26,7 @@ public class Enemy extends GameObject implements PhysicBody, HitObject{
         }
 
         this.velocity = new Vector2D();
-        this.boxCollider = new BoxCollider(50, 63);
+        this.boxCollider = new BoxCollider(45, 59);
         this.runHitObject = new RunHitObject(Player.class);
     }
 
@@ -40,8 +40,6 @@ public class Enemy extends GameObject implements PhysicBody, HitObject{
 
     @Override
     public void getHit(GameObject gameObject) {
-        System.out.println("Aw!");
-        this.isAlive = false;
     }
 
     @Override
