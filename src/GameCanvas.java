@@ -1,9 +1,7 @@
 import base.GameObjectManager;
-import game.background.Background;
 //import game.block.BlockSpawner;
 //import game.enemy.EnemySqawner;
 //import game.enemyhard.EnemyHard;
-import game.player.Player;
 import scence.SceneManager;
 import scene.GamePlayScene;
 //import game.square.circle.CircleSquare;
@@ -28,13 +26,13 @@ public class GameCanvas extends JPanel {
     }
 
     private void setup() {
-        this.setSize(400, 600);
+        this.setSize(400, 720);
         this.setVisible(true);
     }
 
 
     private void setupBackBuffered() {
-        this.backBuffered = new BufferedImage(400, 600, BufferedImage.TYPE_4BYTE_ABGR);
+        this.backBuffered = new BufferedImage(400, 720, BufferedImage.TYPE_4BYTE_ABGR);
         this.graphics = this.backBuffered.getGraphics();
     }
 
