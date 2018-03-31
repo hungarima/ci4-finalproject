@@ -9,15 +9,24 @@ import physic.PhysicBody;
 import physic.RunHitObject;
 import renderer.ImageRenderer;
 
+import java.util.Random;
+
 public class Enemy extends GameObject implements PhysicBody, HitObject{
     public Vector2D velocity;
     private BoxCollider boxCollider;
     private RunHitObject runHitObject;
+    private Random random;
 
     public Enemy() {
-        this.renderer = new ImageRenderer("resources/enemyBike/square_deadly_bullet.png");
+        this.random = new Random();
+        if (random.nextInt(2) == 1) {
+            this.renderer = new ImageRenderer("resources/enemyBike/car.png");
+        } else {
+            this.renderer = new ImageRenderer("resources/enemyBike/lninjja.png");
+        }
+
         this.velocity = new Vector2D();
-        this.boxCollider = new BoxCollider(40, 40);
+        this.boxCollider = new BoxCollider(50, 63);
         this.runHitObject = new RunHitObject(Player.class);
     }
 

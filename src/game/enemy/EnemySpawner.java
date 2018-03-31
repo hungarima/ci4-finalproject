@@ -3,7 +3,6 @@ package game.enemy;
 import action.*;
 import base.GameObject;
 import base.GameObjectManager;
-import game.enemy.Enemy;
 
 import java.util.Random;
 
@@ -24,7 +23,7 @@ public class EnemySpawner extends GameObject {
                 // Tao ra square
                 Enemy enemy = GameObjectManager.instance.recycle(Enemy.class);
                 enemy.position.set(random.nextInt(320 - 70) + 70, 720);
-                enemy.velocity.set(0, (random.nextInt(3) + 1) * -1);
+                enemy.velocity.set(0, (random.nextInt(2) + 1) * -1);
                 return true;
             }
 
