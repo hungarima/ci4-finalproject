@@ -21,6 +21,6 @@ public class Background1 extends GameObject {
         if (this.position.y >= 1000) {
             this.position.y = 300 -720;
         }
-        System.out.println(this.position.y);
+//        System.out.println(this.position.y);
     }
 }

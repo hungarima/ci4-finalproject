@@ -20,10 +20,11 @@ public class Player extends GameObject {
     private Renderer imageRenderer;
 //    private BoxCollider boxCollider = new BoxCollider(40, 40);
     private FrameCounter frameCounter;
+    public int score;
 
 
     public Player() {
-
+        score = 0;
     }
 
     private void block(){
@@ -63,6 +64,7 @@ public class Player extends GameObject {
         this.direction();
         this.position.addUp(KeyboardInput.instance.velocity);
         this.block();
+        System.out.println(score);
 
 //        this.playerShoot.run(this);
 //        this.position.set(MouseMotionInput.instance.position); //chinh lai dieu kien de ngan player ra ngoai window
