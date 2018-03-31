@@ -12,7 +12,10 @@ public class KeyboardInput extends KeyAdapter {
 
     public Vector2D position;
     public Vector2D velocity;
-//    private boolean keyboardReleased = false;
+    private boolean leftKeyIsPressed = false;
+    private boolean rightKeyIsPressed = false;
+    private boolean upKeyIsPressed = false;
+    private boolean downKeyIsPressed = false;
 
     public KeyboardInput () {
         this.velocity = new Vector2D();
@@ -41,22 +44,43 @@ public class KeyboardInput extends KeyAdapter {
     @Override
     public void keyPressed(KeyEvent e) {
         if (e.getKeyCode() == KeyEvent.VK_D || e.getKeyCode() == KeyEvent.VK_RIGHT) {
-            this.velocity.set(2,0);
+            rightKeyIsPressed = true;
+            this.velocity.set((float)0.5,0);
         }
         else if (e.getKeyCode() == KeyEvent.VK_A || e.getKeyCode() == KeyEvent.VK_LEFT) {
-            this.velocity.set(-2,0);
+            this.velocity.set((float)-0.5,0);
+            leftKeyIsPressed = true;
         }
         else if (e.getKeyCode() == KeyEvent.VK_W || e.getKeyCode() == KeyEvent.VK_UP) {
-            this.velocity.set(0,-2);
+            this.velocity.set(0,(float)-0.3);
+            upKeyIsPressed = true;
         }
         else if (e.getKeyCode() == KeyEvent.VK_S || e.getKeyCode() == KeyEvent.VK_DOWN) {
-            this.velocity.set(0,2);
+            this.velocity.set(0,(float)0.05);
+            downKeyIsPressed = true;
         }
     }
 
 
     @Override
     public void keyReleased(KeyEvent e) {
-        this.velocity.set(0,0);
+        if (e.getKeyCode() == KeyEvent.VK_D || e.getKeyCode() == KeyEvent.VK_RIGHT){
+            rightKeyIsPressed = false;
+        }
+        else if (e.getKeyCode() == KeyEvent.VK_A || e.getKeyCode() == KeyEvent.VK_LEFT){
+            leftKeyIsPressed = false;
+        }
+        else if (e.getKeyCode() == KeyEvent.VK_W || e.getKeyCode() == KeyEvent.VK_UP){
+            upKeyIsPressed = false;
+        }
+        else if (e.getKeyCode() == KeyEvent.VK_S || e.getKeyCode() == KeyEvent.VK_DOWN){
+            downKeyIsPressed = false;
+        }
+    }
+
+    public void setStraight(){
+        if(!rightKeyIsPressed && !leftKeyIsPressed && !upKeyIsPressed && !downKeyIsPressed){
+            this.velocity.set(0,0);
+        }
     }
 }
