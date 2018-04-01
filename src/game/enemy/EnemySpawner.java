@@ -3,7 +3,10 @@ package game.enemy;
 import action.*;
 import base.GameObject;
 import base.GameObjectManager;
+import renderer.ImageRenderer;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 public class EnemySpawner extends GameObject {
@@ -17,14 +20,24 @@ public class EnemySpawner extends GameObject {
     }
 
     public void create() {
+        List<Enemy> enemies = new ArrayList<>();
         Action create = new ActionAdapter() {
             @Override
             public boolean run(GameObject owner) {
                 // Tao ra square
                 Enemy enemy = GameObjectManager.instance.recycle(Enemy.class);
+                if (random.nextInt(2) == 1) {
+                    enemy.renderer = new ImageRenderer("resources/enemyBike/car.png");
+                } else {
+                    enemy.renderer = new ImageRenderer("resources/enemyBike/lninjja.png");
+                }
                 enemy.position.set(random.nextInt(320 - 70) + 70, 720);
-                enemy.velocity.set(0, (random.nextInt(2) + 1) * -1);
+                enemy.velocity.set(0, (random.nextFloat() + 1) * -1);
+                enemies.add(enemy);
+                System.out.println(enemy.position.x + " " + enemy.position.y);
+                System.out.println(enemy.velocity.y);
                 return true;
+
             }
 
             @Override
@@ -32,30 +45,33 @@ public class EnemySpawner extends GameObject {
 
             }
         };
+
+
+
+
         this.add(
                 new ActionAdapter() {
-                    private int count = 0;
-                    private Action action = new SequenceAction(
-                            new WaitAction(100),
-                            create
+                    Action sequenceAction = new SequenceAction(
+                            create,
+                            new WaitAction(100)
+
                     );
                     @Override
                     public boolean run(GameObject owner) {
-                        if (this.count == 100) {
-                            return true;
-                        } else {
-                            if (this.action.run(owner)) {
-                                this.action.reset();
-                                this.count += 1;
-                            }
-                            return false;
-                        }
+                        enemies.removeIf(enemy -> !enemy.isAlive);
 
+                        if (enemies.size() != 3) {
+                            if (sequenceAction.run(owner))  {
+                                sequenceAction.reset();
+                            }
+
+                        }
+                        return false;
                     }
 
                     @Override
                     public void reset() {
-                        //this.action.reset();
+
                     }
                 }
         );

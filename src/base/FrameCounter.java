@@ -10,7 +10,6 @@ public class FrameCounter {
 
     public boolean run() {
         if (this.count == this.max) {
-            this.count = 0;
             return true;
         } else {
             this.count += 1;

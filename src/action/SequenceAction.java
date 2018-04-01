@@ -17,6 +17,7 @@ public class SequenceAction implements Action {
     @Override
     public boolean run(GameObject owner) {
         Action action = this. actions.get(this.index);
+
         if (action.run(owner)) {
             if (this.index == this.actions.size() - 1) {
                 return true;

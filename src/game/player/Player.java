@@ -88,6 +88,7 @@ public class Player extends GameObject implements PhysicBody, HitObject {
 
 
 
+
 //        this.playerShoot.run(this);
 //        this.position.set(MouseMotionInput.instance.position); //chinh lai dieu kien de ngan player ra ngoai window
     }
@@ -96,7 +97,7 @@ public class Player extends GameObject implements PhysicBody, HitObject {
         public void getHit(GameObject gameObject) {
             this.renderer = this.animationRenderer;
             this.isAnimation = true;
-            System.out.println("Ouch!");
+//            System.out.println("Ouch!");
         }
 
         @Override

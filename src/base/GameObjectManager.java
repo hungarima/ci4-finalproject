@@ -1,6 +1,7 @@
 package base;
 
 //import game.enemy.Enemy;
+import game.enemy.Enemy;
 import game.player.Player;
 //import game.square.Square;
 import physic.BoxCollider;
@@ -56,8 +57,23 @@ public class GameObjectManager {
                 })
                 .findFirst()
                 .orElse(null);
-
     }
+
+    public <T extends GameObject> T checkCollisionAround(BoxCollider other, Class<T> cls) {
+        return (T) this.vector
+                .stream()
+                .filter(gameObject -> gameObject.isAlive)
+                .filter(gameObject -> cls.isInstance(gameObject))
+                .filter(gameObject -> gameObject instanceof Enemy)
+                .filter(gameObject -> {
+                    BoxCollider boxCollider = ((Enemy) gameObject).getBoxCollider();
+                    return boxCollider.checkColliderAround(other, 100);
+
+                })
+                .findFirst()
+                .orElse(null);
+    }
+
 
     public <T extends  GameObject> T recycle(Class<T> cls) {
         T t =  (T) this.vector
