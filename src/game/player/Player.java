@@ -25,6 +25,7 @@ public class Player extends GameObject implements PhysicBody, HitObject {
     private BoxCollider boxCollider = new BoxCollider(45, 50);
     private FrameCounter frameCounter;
     private boolean isAnimation;
+    public int score;
 
 
     public Player() {
@@ -36,8 +37,8 @@ public class Player extends GameObject implements PhysicBody, HitObject {
                 "resources/player/NVAT.png",
                 "resources/player/blah.png",
                 "resources/player/NVAT.png"
-
         );
+        this.score = score;
     }
 
     private void block(){
@@ -61,6 +62,7 @@ public class Player extends GameObject implements PhysicBody, HitObject {
 
     @Override
     public void run() {
+        this.score ++;
         this.position.addUp(0,(float)0.12);
         KeyboardInput.instance.setStraight();
         if(KeyboardInput.instance.velocity.getX() > 0){
