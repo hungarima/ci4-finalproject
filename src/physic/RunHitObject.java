@@ -2,6 +2,7 @@ package physic;
 
 import base.GameObject;
 import base.GameObjectManager;
+import game.enemy.Enemy;
 
 import java.util.Arrays;
 import java.util.List;
@@ -25,4 +26,6 @@ public class RunHitObject<O extends GameObject & PhysicBody & HitObject> {
             }
         });
     }
+
+
 }

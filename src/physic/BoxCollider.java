@@ -21,4 +21,11 @@ public class BoxCollider {
 
         return r1.intersects(r2);
     }
+
+    public boolean checkColliderAround (BoxCollider other, int increaseRadius) {
+        Rectangle r1 = new Rectangle((int) this.position.x - increaseRadius, (int) this.position.y - increaseRadius, (int) this.width + increaseRadius, (int)this.height + increaseRadius);
+        Rectangle r2 = new Rectangle((int) other.position.x - increaseRadius, (int) other.position.y - increaseRadius, (int) other.width + increaseRadius, (int)other.height + increaseRadius);
+
+        return r1.intersects(r2);
+    }
 }
