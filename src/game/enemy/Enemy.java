@@ -26,7 +26,7 @@ public class Enemy extends GameObject implements PhysicBody, HitObject {
         }
 
         this.velocity = new Vector2D();
-        this.boxCollider = new BoxCollider(45, 59);
+        this.boxCollider = new BoxCollider(45, 60);
         this.runHitObject = new RunHitObject(Player.class);
     }
 

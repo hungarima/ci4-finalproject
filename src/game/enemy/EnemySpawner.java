@@ -36,7 +36,7 @@ public class EnemySpawner extends GameObject {
                 new ActionAdapter() {
                     private int count = 0;
                     private Action action = new SequenceAction(
-                            new WaitAction(80),
+                            new WaitAction(100),
                             create
                     );
                     @Override
