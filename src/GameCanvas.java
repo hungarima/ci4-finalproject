@@ -19,18 +19,23 @@ public class GameCanvas extends JPanel {
 
     BufferedImage backBuffered;
     Graphics graphics;
+//    Graphics2D g2;
 
     public GameCanvas() {
         this.setup();
         this.setupBackBuffered();
         SceneManager.instance.changeScene(new GamePlayScene());
-
+//        this.displayScore();
     }
 
     private void setup() {
         this.setSize(400, 720);
         this.setVisible(true);
     }
+
+//    private void displayScore(){
+//        this.g2.drawString("Score: " + GameObjectManager.instance.getPlayer().score,10,10);
+//    }
 
 
     private void setupBackBuffered() {

@@ -26,6 +26,7 @@ public class Player extends GameObject implements PhysicBody, HitObject {
     private FrameCounter frameCounter;
     private boolean isAnimation;
     public int score;
+    private int count;
 
 
     public Player() {
@@ -39,6 +40,7 @@ public class Player extends GameObject implements PhysicBody, HitObject {
                 "resources/player/NVAT.png"
         );
         this.score = score;
+        this.count = count;
     }
 
     private void block(){
@@ -60,9 +62,16 @@ public class Player extends GameObject implements PhysicBody, HitObject {
 
     }
 
+    private void addScore(){
+        if(this.count % 100 == 0){
+            this.score++;
+        }
+    }
+
     @Override
     public void run() {
-        this.score ++;
+        this.count++;
+        this.addScore();
         this.position.addUp(0,(float)0.12);
         KeyboardInput.instance.setStraight();
         if(KeyboardInput.instance.velocity.getX() > 0){
