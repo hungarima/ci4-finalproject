@@ -6,9 +6,7 @@ import base.GameObjectManager;
 import java.util.Arrays;
 import java.util.List;
 
-/**
- * Created by huynq on 3/17/18.
- */
+
 public class RunHitObject<O extends GameObject & PhysicBody & HitObject> {
 
     private List<Class<O>> objects;
