@@ -64,7 +64,7 @@ public class Player extends GameObject implements PhysicBody, HitObject {
 
     private void addScore(){
         if(this.count % 100 == 0){
-            this.score++;
+            this.score+=10;
         }
     }
 

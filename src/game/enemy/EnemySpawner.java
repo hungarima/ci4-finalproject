@@ -25,11 +25,16 @@ public class EnemySpawner extends GameObject {
             @Override
             public boolean run(GameObject owner) {
                 // Tao ra square
+                int randomNumb = random.nextInt(4);
                 Enemy enemy = GameObjectManager.instance.recycle(Enemy.class);
-                if (random.nextInt(2) == 1) {
+                if (randomNumb == 1) {
                     enemy.renderer = new ImageRenderer("resources/enemyBike/car.png");
-                } else {
+                } else if (randomNumb == 2) {
                     enemy.renderer = new ImageRenderer("resources/enemyBike/lninjja.png");
+                } else if (randomNumb == 3){
+                    enemy.renderer = new ImageRenderer("resources/enemyBike/đua.png");
+                } else {
+                    enemy.renderer = new ImageRenderer("resources/enemyBike/ôm.png");
                 }
                 enemy.position.set(random.nextInt(320 - 70) + 70, 720);
                 enemy.velocity.set(0, (random.nextFloat() + 1) * -1);

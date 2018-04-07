@@ -4,6 +4,8 @@ import base.GameObject;
 
 import base.Vector2D;
 import renderer.BlurRenderer;
+import renderer.ImageRenderer;
+import renderer.Renderer;
 
 
 public class StartBackground1 extends GameObject {
@@ -12,6 +14,8 @@ public class StartBackground1 extends GameObject {
     public StartBackground1() {
         this.renderer = new BlurRenderer("resources/background/background1.png");
         this.velocity = new Vector2D();
+
+
     }
 
     @Override
@@ -21,6 +25,5 @@ public class StartBackground1 extends GameObject {
         if (this.position.y >= 1000) {
             this.position.y = 300 -720;
         }
-        System.out.println(this.position.y);
     }
 }
