@@ -9,6 +9,7 @@ import game.background.Background2;
 import game.player.Player;
 import game.enemy.EnemySpawner;
 import game.roadobjects.Brick;
+import utils.AudioUtils;
 
 import javax.sound.sampled.Clip;
 
@@ -19,12 +20,12 @@ public class GamePlayScene implements Scene {
 
     @Override
     public void init() {
-//        this.clip = AudioUtils.instance.loadSound("resources/sound/bgm/bgmwav.wav");
+//        this.clip = AudioUtils.instance.loadSound("resources/sound/Đường Của Bố Mày.wav");
 //        this.clip.loop(-1);
         this.setupBackground();
         this.setupPlayer();
         this.setupEnemy();
-        this.setupBrick();
+//        this.setupBrick();
     }
 
     @Override

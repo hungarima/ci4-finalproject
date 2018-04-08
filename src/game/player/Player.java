@@ -14,7 +14,9 @@ import renderer.AnimationRenderer;
 import renderer.ImageRenderer;
 import renderer.Renderer;
 //import renderer.ScoreRenderer;
+import scene.EndScene;
 import utils.Utils;
+import scence.SceneManager;
 
 import java.awt.event.KeyEvent;
 import java.security.Key;
@@ -29,6 +31,7 @@ public class Player extends GameObject implements PhysicBody, HitObject {
     public int score;
     private int count;
     private RunHitObject runHitObject;
+    public boolean getHit= false;
 
 
     public Player() {
@@ -94,6 +97,7 @@ public class Player extends GameObject implements PhysicBody, HitObject {
         if (this.isAnimation) {
             if (this.frameCounter.run()) {
                 this.isAnimation = false;
+                SceneManager.instance.changeScene(new EndScene());
                 this.renderer = this.imageRenderer;
                 this.frameCounter.reset();
             }
@@ -106,6 +110,8 @@ public class Player extends GameObject implements PhysicBody, HitObject {
         public void getHit(GameObject gameObject) {
             this.renderer = this.animationRenderer;
             this.isAnimation = true;
+
+
 //            System.out.println("Ouch!");
         }
 

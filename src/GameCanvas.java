@@ -2,7 +2,11 @@ import base.GameObjectManager;
 //import game.block.BlockSpawner;
 //import game.enemy.EnemySqawner;
 //import game.enemyhard.EnemyHard;
+import game.background.StartButton;
+import game.player.Player;
+import input.MouseInput;
 import scence.SceneManager;
+import scene.EndScene;
 import scene.GamePlayScene;
 import scene.StartScene;
 //import game.square.circle.CircleSquare;
@@ -25,6 +29,7 @@ public class GameCanvas extends JPanel {
         this.setup();
         this.setupBackBuffered();
         SceneManager.instance.changeScene(new StartScene());
+
 //        this.displayScore();
     }
 

@@ -38,9 +38,9 @@ public class EnemySpawner extends GameObject {
                 } else {
                     enemy.renderer = new ImageRenderer("resources/enemyBike/ôm.png");
                 }
-                if(random.nextInt(3)==1){
-                    enemyChase.renderer = new ImageRenderer("resources/enemyBike/xott.png");
-                }
+//                if(random.nextInt(3)==1){
+//                    enemyChase.renderer = new ImageRenderer("resources/enemyBike/xott.png");
+//                }
                 enemyChase.position.set((float)(Math.random()*400),600);
                 enemy.position.set(random.nextInt(320 - 70) + 70, 720);
                 enemy.velocity.set(0, (random.nextFloat() + 1) * -1);

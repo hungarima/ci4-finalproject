@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="ci4-finalproject:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/ci4_finalproject_jar</output-path>
+    <root id="archive" name="ci4-finalproject.jar">
+      <element id="module-output" name="ci4-finalproject" />
+    </root>
+  </artifact>
+</component>
