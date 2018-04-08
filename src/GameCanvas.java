@@ -24,7 +24,7 @@ public class GameCanvas extends JPanel {
     public GameCanvas() {
         this.setup();
         this.setupBackBuffered();
-        SceneManager.instance.changeScene(new GamePlayScene());
+        SceneManager.instance.changeScene(new StartScene());
 //        this.displayScore();
     }
 

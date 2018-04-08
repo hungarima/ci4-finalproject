@@ -20,6 +20,5 @@ public class StartBackground2 extends GameObject {
             if (this.position.y >= 1000) {
                 this.position.y = 300 -720;
             }
-            System.out.println(this.position.y);
         }
 }
