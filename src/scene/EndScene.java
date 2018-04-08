@@ -1,6 +1,7 @@
 package scene;
 
 import base.GameObjectManager;
+import game.background.ContinueButton;
 import game.background.EndBackground;
 
 public class EndScene implements Scene {
@@ -18,5 +19,9 @@ public class EndScene implements Scene {
         EndBackground endBackground = new EndBackground();
         endBackground.position.set(200,300);
         GameObjectManager.instance.add(endBackground);
+
+        ContinueButton continueButton = new ContinueButton();
+        continueButton.position.set(190, 450);
+        GameObjectManager.instance.add(continueButton);
     }
 }
