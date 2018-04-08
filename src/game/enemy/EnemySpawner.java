@@ -20,19 +20,26 @@ public class EnemySpawner extends GameObject {
     }
 
     public void create() {
+        List<EnemyChase> enemiesChase = new ArrayList<>();
         List<Enemy> enemies = new ArrayList<>();
         Action create = new ActionAdapter() {
             @Override
             public boolean run(GameObject owner) {
                 // Tao ra square
+                EnemyChase enemyChase = GameObjectManager.instance.recycle(EnemyChase.class);
                 Enemy enemy = GameObjectManager.instance.recycle(Enemy.class);
                 if (random.nextInt(2) == 1) {
                     enemy.renderer = new ImageRenderer("resources/enemyBike/car.png");
                 } else {
                     enemy.renderer = new ImageRenderer("resources/enemyBike/lninjja.png");
                 }
+                if(random.nextInt(3)==1){
+                    enemyChase.renderer = new ImageRenderer("resources/enemyBike/xott.png");
+                }
+                enemyChase.position.set((float)(Math.random()*400),600);
                 enemy.position.set(random.nextInt(320 - 70) + 70, 720);
                 enemy.velocity.set(0, (random.nextFloat() + 1) * -1);
+                enemiesChase.add(enemyChase);
                 enemies.add(enemy);
                 System.out.println(enemy.position.x + " " + enemy.position.y);
                 System.out.println(enemy.velocity.y);

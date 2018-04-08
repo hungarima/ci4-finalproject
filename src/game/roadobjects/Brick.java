@@ -1,39 +1,37 @@
-package game.enemy;
+package game.roadobjects;
 
 import base.GameObject;
 import base.Vector2D;
 import game.player.Player;
-import physic.*;
+import physic.BoxCollider;
+import physic.HitObject;
+import physic.PhysicBody;
+import physic.RunHitObject;
 import renderer.ImageRenderer;
 
 import java.util.Random;
 
-public class Enemy extends GameObject implements PhysicBody, HitObject {
-    public Vector2D velocity;
-    private BoxCollider boxCollider;
+public class Brick extends GameObject implements PhysicBody,HitObject{
     private RunHitObject runHitObject;
-    private Random random;
+    private BoxCollider boxCollider;
 
-    public Enemy() {
-        this.random = new Random();
-        this.velocity = new Vector2D();
-        this.boxCollider = new BoxCollider(45, 60);
+    public Brick() {
+        this.renderer = new ImageRenderer("resources/roadObjects/brick.png");
+        this.boxCollider = new BoxCollider(40,40);
         this.runHitObject = new RunHitObject(Player.class);
     }
 
     @Override
     public void run() {
         super.run();
-        this.position.addUp(this.velocity);
+        this.position.set(this.position);
         this.boxCollider.position.set(this.position);
         this.runHitObject.run(this);
-        if (this.position.y < 0) {
-            this.isAlive = false;
-        }
     }
 
     @Override
     public void getHit(GameObject gameObject) {
+        this.isAlive = false;
     }
 
     @Override
@@ -41,3 +39,4 @@ public class Enemy extends GameObject implements PhysicBody, HitObject {
         return this.boxCollider;
     }
 }
+

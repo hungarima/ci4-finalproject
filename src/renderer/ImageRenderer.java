@@ -20,7 +20,6 @@ public class ImageRenderer implements Renderer {
         if (this.image != null) {
             graphics.drawImage(this.image, (int)position.x - this.image.getWidth() / 2, (int)position.y - this.image.getHeight() / 2, null);
             graphics.drawString("Score: " + String.valueOf(GameObjectManager.instance.getPlayer().score), 10, 10);
-            graphics.setFont(new Font("TimesRoman", Font.PLAIN, 12));
         }
     }
 }

@@ -8,6 +8,7 @@ import game.background.Background2;
 
 import game.player.Player;
 import game.enemy.EnemySpawner;
+import game.roadobjects.Brick;
 
 import javax.sound.sampled.Clip;
 
@@ -23,6 +24,7 @@ public class GamePlayScene implements Scene {
         this.setupBackground();
         this.setupPlayer();
         this.setupEnemy();
+        this.setupBrick();
     }
 
     @Override
@@ -33,6 +35,12 @@ public class GamePlayScene implements Scene {
         Player player = GameObjectManager.instance.recycle(Player.class);
         player.position.set(200, 300);
         GameObjectManager.instance.add(player);
+    }
+
+    private void setupBrick() {
+        Brick brick = GameObjectManager.instance.recycle(Brick.class);
+        brick.position.set((float)((Math.random()*200) + 100), (float)((Math.random()*600)));
+        GameObjectManager.instance.add(brick);
     }
 
     private void setupBackground() {

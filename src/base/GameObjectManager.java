@@ -6,6 +6,7 @@ import game.player.Player;
 //import game.square.Square;
 import physic.BoxCollider;
 import physic.PhysicBody;
+import game.roadobjects.Brick;
 
 import java.awt.*;
 import java.util.Vector;

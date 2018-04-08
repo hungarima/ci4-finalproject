@@ -4,22 +4,23 @@ import base.FrameCounter;
 import base.GameObject;
 //import game.player.bullet.PlayerShoot;
 //import input.MouseMotionInput;
+import game.roadobjects.Brick;
 import input.KeyboardInput;
 import physic.BoxCollider;
 import physic.HitObject;
 import physic.PhysicBody;
+import physic.RunHitObject;
 import renderer.AnimationRenderer;
 import renderer.ImageRenderer;
 import renderer.Renderer;
+//import renderer.ScoreRenderer;
 import utils.Utils;
 
 import java.awt.event.KeyEvent;
 import java.security.Key;
 
 public class Player extends GameObject implements PhysicBody, HitObject {
-
-
-
+//    private Renderer scoreRenderer;
     private Renderer imageRenderer;
     private Renderer animationRenderer;
     private BoxCollider boxCollider = new BoxCollider(45, 50);
@@ -27,6 +28,7 @@ public class Player extends GameObject implements PhysicBody, HitObject {
     private boolean isAnimation;
     public int score;
     private int count;
+    private RunHitObject runHitObject;
 
 
     public Player() {
@@ -41,6 +43,7 @@ public class Player extends GameObject implements PhysicBody, HitObject {
         );
         this.score = score;
         this.count = count;
+        this.runHitObject = new RunHitObject(Brick.class);
     }
 
     private void block(){
@@ -58,15 +61,15 @@ public class Player extends GameObject implements PhysicBody, HitObject {
         }
     }
 
-    private void direction(){
-
-    }
-
     private void addScore(){
         if(this.count % 100 == 0){
             this.score++;
         }
     }
+
+//    public void collectBrick(){
+//        if(this.position.equals())
+//    }
 
     @Override
     public void run() {
@@ -85,7 +88,6 @@ public class Player extends GameObject implements PhysicBody, HitObject {
         }
         this.renderer = this.imageRenderer;
         super.run();
-        this.direction();
         this.position.addUp(KeyboardInput.instance.velocity);
         this.block();
         this.boxCollider.position.set(this.position);
@@ -96,12 +98,8 @@ public class Player extends GameObject implements PhysicBody, HitObject {
                 this.frameCounter.reset();
             }
         }
-
-
-
-
-//        this.playerShoot.run(this);
-//        this.position.set(MouseMotionInput.instance.position); //chinh lai dieu kien de ngan player ra ngoai window
+//        this.runHitObject.run(this);
+//        this.displayScore();
     }
 
         @Override
@@ -116,5 +114,9 @@ public class Player extends GameObject implements PhysicBody, HitObject {
             return this.boxCollider;
         }
 
+//        public void displayScore(){
+//            this.scoreRenderer = new ScoreRenderer();
+//            System.out.println(this.scoreRenderer);
+//        }
 }
 
