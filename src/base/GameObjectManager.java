@@ -101,6 +101,11 @@ public class GameObjectManager {
 
     }
 
+    public void clear() {
+        this.vector.clear();
+        this.temp.clear();
+    }
+
 
     public void add(GameObject gameObject) {
         this.temp.add(gameObject);

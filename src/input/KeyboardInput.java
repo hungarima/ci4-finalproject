@@ -45,14 +45,14 @@ public class KeyboardInput extends KeyAdapter {
     public void keyPressed(KeyEvent e) {
         if (e.getKeyCode() == KeyEvent.VK_D || e.getKeyCode() == KeyEvent.VK_RIGHT) {
             rightKeyIsPressed = true;
-            this.velocity.set((float)0.5,0);
+            this.velocity.set((float)1,0);
         }
         else if (e.getKeyCode() == KeyEvent.VK_A || e.getKeyCode() == KeyEvent.VK_LEFT) {
-            this.velocity.set((float)-0.5,0);
+            this.velocity.set((float)-1,0);
             leftKeyIsPressed = true;
         }
         else if (e.getKeyCode() == KeyEvent.VK_W || e.getKeyCode() == KeyEvent.VK_UP) {
-            this.velocity.set(0,(float)-0.3);
+            this.velocity.set(0,(float)-0.7);
             upKeyIsPressed = true;
         }
         else if (e.getKeyCode() == KeyEvent.VK_S || e.getKeyCode() == KeyEvent.VK_DOWN) {

@@ -5,6 +5,7 @@ import base.GameObject;
 //import game.player.bullet.PlayerShoot;
 //import input.MouseMotionInput;
 import game.roadobjects.Brick;
+//import game.score.Score;
 import input.KeyboardInput;
 import physic.BoxCollider;
 import physic.HitObject;
@@ -13,16 +14,18 @@ import physic.RunHitObject;
 import renderer.AnimationRenderer;
 import renderer.ImageRenderer;
 import renderer.Renderer;
-//import renderer.ScoreRenderer;
+//import renderer.StringRenderer;
 import scene.EndScene;
+import utils.AudioUtils;
 import utils.Utils;
 import scence.SceneManager;
 
+import javax.sound.sampled.Clip;
 import java.awt.event.KeyEvent;
 import java.security.Key;
 
 public class Player extends GameObject implements PhysicBody, HitObject {
-//    private Renderer scoreRenderer;
+//    private Renderer stringRenderer;
     private Renderer imageRenderer;
     private Renderer animationRenderer;
     private BoxCollider boxCollider = new BoxCollider(45, 50);
@@ -32,9 +35,11 @@ public class Player extends GameObject implements PhysicBody, HitObject {
     private int count;
     private RunHitObject runHitObject;
     public boolean getHit= false;
+    private Clip clip;
 
 
     public Player() {
+//        this.stringRenderer = new StringRenderer();
         this.frameCounter = new FrameCounter(50);
         this.animationRenderer = new AnimationRenderer(
                 5,
@@ -65,8 +70,8 @@ public class Player extends GameObject implements PhysicBody, HitObject {
     }
 
     private void addScore(){
-        if(this.count % 100 == 0){
-            this.score+=10;
+        if((this.count % 100) == 0 && this.isAlive ){
+            this.score +=10;
         }
     }
 
@@ -89,6 +94,7 @@ public class Player extends GameObject implements PhysicBody, HitObject {
         else{
             this.imageRenderer = new ImageRenderer("resources/player/NVAT.png");
         }
+
         this.renderer = this.imageRenderer;
         super.run();
         this.position.addUp(KeyboardInput.instance.velocity);
@@ -110,6 +116,8 @@ public class Player extends GameObject implements PhysicBody, HitObject {
         public void getHit(GameObject gameObject) {
             this.renderer = this.animationRenderer;
             this.isAnimation = true;
+            this.clip = AudioUtils.instance.loadSound("resources/sound/Car-crash-sound-effect.wav");
+            this.clip.loop(1);
 
 
 //            System.out.println("Ouch!");

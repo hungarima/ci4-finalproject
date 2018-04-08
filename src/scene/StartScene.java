@@ -13,7 +13,7 @@ public class StartScene implements Scene {
 
     @Override
     public void deinit() {
-
+        GameObjectManager.instance.clear();
     }
 
     private void setupBackground() {
@@ -29,12 +29,15 @@ public class StartScene implements Scene {
     private void setupElements() {
         StartButton startButton = new StartButton();
         SoundButton soundButton = new SoundButton();
+        Title title = new Title();
         Figure figure = new Figure();
         startButton.position.set(190, 400);
+        title.position.set(190,200);
         soundButton.position.set(330,50);
         figure.position.set(190, 300);
+        GameObjectManager.instance.add(title);
         GameObjectManager.instance.add(startButton);
-        GameObjectManager.instance.add(soundButton);
+//        GameObjectManager.instance.add(soundButton);
 //        GameObjectManager.instance.add(figure);
     }
 }

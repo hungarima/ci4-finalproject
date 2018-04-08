@@ -11,7 +11,7 @@ public class EndScene implements Scene {
 
     @Override
     public void deinit() {
-
+        GameObjectManager.instance.clear();
     }
 
     private void setupBackground() {
