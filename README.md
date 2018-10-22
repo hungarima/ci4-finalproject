@@ -1,2 +1,3 @@
 # ci4-finalproject
-From Techkids with <3
+A 2D Racing + Avoiding Obstacles Game written by 2 boys in Java
+
